@@ -17,8 +17,19 @@
 <body>
 <?php 
 $rows = array();
-require('..\db\get_hour.php');
+require('..\db\get_day.php');
+//echo count($responseC1);
 //echo count($responseTime);
+/*for($i=0; $i< count($responseTime); $i++)
+        {
+            $hour = $responseTime[$i];
+            echo "<br>";    
+            $hours = new DateTime($hour);
+            //echo $hours->format('H:i:s');
+            //echo "<br>";
+            //echo '\''. $hours->format('H:m:s') . '\'';
+            echo ', ';
+        }*/
 ?>
 <?php require(dirname(__FILE__).'/../nav.php') ?>
 <?php if($responseTime == null)
@@ -27,22 +38,21 @@ require('..\db\get_hour.php');
     <div class="text-center text-muted">
     <h1>
         <br>
-        Brak danych z czujników z ostatniej godziny
+        Brak danych z czujników z ostatnich 24 godzin
     </h1>
 </div><?php
 }else {
     ?><div id='container'></div> <?php
 }
 ?>
-
-
 <script>
 Highcharts.chart('container', {
     chart: {
-        type: 'line'
+        type: 'line',
+        zoomType: 'x'
     },
     title: {
-        text: 'Temperatura ostatniej godziny'
+        text: 'Temperatura ostatniej doby'
     },
     subtitle: {
         //text: 'Wykres'
@@ -55,7 +65,7 @@ Highcharts.chart('container', {
         {
             $time = $responseTime[$i];
             $time = strtotime($time);
-            echo '\''. date('H:i:s', $time) . '\'';
+            echo '\''. date('H:i', $time) . '\'';
             echo ', ';
         }
         ?>]
@@ -72,6 +82,9 @@ Highcharts.chart('container', {
             },
             enableMouseTracking: false
         }
+    },
+    tooltip: {
+        valueSuffix: ' C'
     },
     series: [{
         name: 'Temperatura wody użytkowej',

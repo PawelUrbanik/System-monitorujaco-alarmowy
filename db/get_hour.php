@@ -25,24 +25,6 @@ if($result->num_rows >0)
         //echo $responseTime[$i];
         //echo "<br>";
     }
-
-    /*while($row = $result->fetch_assoc()) { 
-        //$response['id'] =$row["id"];
-        $responseTime[]=$row["time"];
-        $response["c1"] =$row["c1"];
-        $response["c2"] =$row["c2"];
-        $response["c3"] =$row["c3"];
-        //echo json_encode($response, JSON_NUMERIC_CHECK );
-        //echo '<br>';
-    }*/
-        //echo $responseTime[1];
-        //echo json_encode($response );
-        //echo $response;
-        //echo "<br>";
-    
-
-    
-
 }else {
     echo "no rows";
 }
