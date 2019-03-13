@@ -11,7 +11,7 @@
     <body>
     <?php
     $values = array();
-    require('../db/get_one.php');
+    require('db/get_one.php');
     $values= $response;
     ?>
             <div id="container1" style="position:absolute; left:0px; top:20px height:400px"></div>
@@ -123,7 +123,7 @@
                   if (!chart.renderer.forExport) {
                     var newVal;
                     setInterval(function () {
-                      $.getJSON('../db/get_one.php', function(data) {
+                      $.getJSON('db/get_one.php', function(data) {
                         //myValue.innerHTML(data.c1);
                         newVal = data.c1;
                         console.log(newVal);
@@ -240,7 +240,7 @@
                   if (!chart.renderer.forExport) {
                     var newVal;
                     setInterval(function () {
-                      $.getJSON('../db/get_one.php', function(data) {
+                      $.getJSON('db/get_one.php', function(data) {
                         //myValue.innerHTML(data.c1);
                         newVal = data.c2;
                         console.log(newVal);
@@ -356,7 +356,7 @@
                   if (!chart.renderer.forExport) {
                     var newVal;
                     setInterval(function () {
-                      $.getJSON('../db/get_one.php', function(data) {
+                      $.getJSON('db/get_one.php', function(data) {
                         //myValue.innerHTML(data.c1);
                         newVal = data.c3;
                         console.log(newVal);
