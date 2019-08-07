@@ -1,8 +1,8 @@
 <?php
-$date = date('Y-m-d H:i:s ', time());
-$lastDay = date('Y-m-d H:i:s ', time() - 24*60*60);
+$now_date = date('Y-m-d H:i:s ', time());
+$hour_ago = date('Y-m-d H:i:s ', time() - 24*60*60);
 require("db_connect.php");
-//$sql = "SELECT * FROM sys_values WHERE time BETWEEN '$lastDay' AND '$date';";
+//$sql = "SELECT * FROM sys_values WHERE time BETWEEN '$hour_ago' AND '$now_date';";
 $sql = "SELECT * FROM sys_values;";
 
 $responseTime = array();

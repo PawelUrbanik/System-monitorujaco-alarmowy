@@ -1,6 +1,6 @@
 <?php
 $date = date('Y-m-d H:i:s ', time());
-$lastHour = date('Y-m-d H:i:s ', time() - 60*60);
+$lastHour = date('Y-m-d H:i:s ', time() - 60*60*60*50); //60*60
 
 require("db_connect.php");
 $sql = "SELECT * FROM sys_values WHERE time BETWEEN '$lastHour' AND '$date';";

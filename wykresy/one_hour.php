@@ -24,14 +24,23 @@ require('..\db\get_hour.php');
 <?php if($responseTime == null)
 {
     ?>
-    <div class="text-center text-muted">
-    <h1>
-        <br>
-        Brak danych z czujników z ostatniej godziny
-    </h1>
-</div><?php
+    <div class="container">
+            <div class="text-center text-muted">
+                <h1>
+                    <br>
+                    Brak danych z czujników z ostatniej godziny
+                </h1>
+            </div>   
+    </div>
+<?php
 }else {
-    ?><div id='container'></div> <?php
+    ?>
+    <div class="container">
+        <div class="row">
+            <div id='container' class="col-sm-12 col-xs-12"></div>
+        </div> 
+    </div>
+    <?php
 }
 ?>
 

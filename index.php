@@ -7,24 +7,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<?php require('nav.php'); ?>
-			<div class=" center page-header">
-				<h1>
-					Temperatura wody:
-				</h1>
-			</div>
-			<h3 class="text-center text-muted">
-				Godzina pobrania danych:  
-			</h3>
-			<div class="jumbotron card" style="background-color: white">
-				<?php require('zegar/index2.php'); ?>
-			</div>
-		</div>
-	</div>
-</div>
+<?php 
+require('nav.php');					
+require('zegar/index2.php'); 
+?>
+			
+	
 </body>
 
 </html>

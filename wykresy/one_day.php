@@ -42,7 +42,13 @@ require('..\db\get_day.php');
     </h1>
 </div><?php
 }else {
-    ?><div id='container'></div> <?php
+    ?>
+    <div class="container">
+        <div class="row">
+            <div id='container' class="col-sm-12 col-xs-12"></div>
+        </div> 
+    </div>
+     <?php
 }
 ?>
 <script>
