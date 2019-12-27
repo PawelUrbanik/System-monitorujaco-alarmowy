@@ -48,7 +48,8 @@ require(dirname(__FILE__).'/../db/get_three_hour.php');
 <script>
 Highcharts.chart('container', {
     chart: {
-        type: 'line'
+        type: 'line',
+        zoomType: 'x'
     },
     title: {
         text: 'Temperatura ostatniej godziny'
