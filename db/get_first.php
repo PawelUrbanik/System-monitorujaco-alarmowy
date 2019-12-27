@@ -15,9 +15,6 @@ if($result->num_rows >0)
         $response['c2']=$row['c2'];
         $response['c3']=$row['c3'];
     }
-    echo json_encode($response, JSON_NUMERIC_CHECK);
-
-
 }else {
     echo "no rows";
 }

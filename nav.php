@@ -8,6 +8,9 @@
 							 <a class="nav-link" href="<?php dirname(__FILE__)?>/system/wykresy/one_hour.php">Ostatnia godzina <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
+							 <a class="nav-link" href="<?php dirname(__FILE__)?>/system/wykresy/three_hour.php">Ostatnie 3 godziny</a>
+						</li>
+						<li class="nav-item">
 							 <a class="nav-link" href="<?php dirname(__FILE__)?>/system/wykresy/one_day.php">Ostatnia doba</a>
 						</li>
 					</ul>

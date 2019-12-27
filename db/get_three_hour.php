@@ -1,9 +1,9 @@
 <?php
 $date = date('Y-m-d H:i:s ', time());
-$lastHour = date('Y-m-d H:i:s ', time() - 60*60); 
+$last3Hour = date('Y-m-d H:i:s ', time() - 3*60*60); 
 
 require("db_connect.php");
-$sql = "SELECT * FROM sys_values WHERE time BETWEEN '$lastHour' AND '$date';";
+$sql = "SELECT * FROM sys_values WHERE time BETWEEN '$last3Hour' AND '$date';";
 
 $responseTime = array();
 $responseC1 = array();

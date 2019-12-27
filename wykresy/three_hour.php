@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Temperatura ostatniej godziny</title>
+    <title>Temperatura ostatnich 3 godzin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -17,7 +17,7 @@
 <body>
 <?php 
 $rows = array();
-require(dirname(__FILE__).'/../db/get_hour.php');
+require(dirname(__FILE__).'/../db/get_three_hour.php');
 //echo count($responseTime);
 ?>
 <?php require(dirname(__FILE__).'/../nav.php') ?>
@@ -28,7 +28,7 @@ require(dirname(__FILE__).'/../db/get_hour.php');
             <div class="text-center text-muted">
                 <h1>
                     <br>
-                    Brak danych z czujników z ostatniej godziny
+                    Brak danych z czujników z ostatnich 3 godzin
                 </h1>
             </div>   
     </div>
@@ -120,4 +120,3 @@ Highcharts.chart('container', {
 </script>
 </body>
 </html>
-

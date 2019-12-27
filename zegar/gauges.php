@@ -11,7 +11,7 @@
     <body>
     <?php
     $values = array();
-    require('db/get_one.php');
+    require('db/get_first.php');
     $values= $response;
     //echo $values;
     ?>
@@ -19,8 +19,8 @@
       <div class="row">
         <div class="col-md-12">
 			    <div class="center page-header">
-				<h1>
-					Temperatura wody:
+				<h1 class="text-center">
+					Temperatura wody
 				</h1>
       </div>
       <div class="row">
@@ -80,7 +80,7 @@
                   // the value axis
                   yAxis: {
                     min: 0,
-                    max: 120,
+                    max: 100,
                 
                     minorTickInterval: 'auto',
                     minorTickWidth: 1,
@@ -102,22 +102,22 @@
                     },
                     plotBands: [{
                       from: 0,
-                      to: 80,
+                      to: 60,
                       color: '#55BF3B' // green
                     }, {
-                      from: 80,
-                      to: 95,
+                      from: 60,
+                      to: 75,
                       color: '#DDDF0D' // yellow
                     }, {
-                      from: 95,
-                      to: 120,
+                      from: 75,
+                      to: 100,
                       color: '#DF5353' // red
                     }]
                   },
                 
                   series: [{
                     name: 'Temperatura',
-                    data: [<?php echo $values['c1'] ?>],
+                    data: [<?php echo $values['c2'] ?>],
                     tooltip: {
                       valueSuffix: ' C'
                     }
@@ -141,7 +141,7 @@
                         }
                         point.update(newVal);
                       });                      
-                    }, 5000);
+                    }, 30000);
                   }
                 }
                 );
@@ -198,7 +198,7 @@
                   // the value axis
                   yAxis: {
                     min: 0,
-                    max: 120,
+                    max: 100,
                 
                     minorTickInterval: 'auto',
                     minorTickWidth: 1,
@@ -220,22 +220,22 @@
                     },
                     plotBands: [{
                       from: 0,
-                      to: 80,
+                      to: 60,
                       color: '#55BF3B' // green
                     }, {
-                      from: 80,
-                      to: 95,
+                      from: 60,
+                      to: 75,
                       color: '#DDDF0D' // yellow
                     }, {
-                      from: 95,
-                      to: 120,
+                      from: 75,
+                      to: 100,
                       color: '#DF5353' // red
                     }]
                   },
                 
                   series: [{
                     name: 'Temperatura',
-                    data: [<?php echo $values['c2'] ?>],
+                    data: [<?php echo $values['c3'] ?>],
                     tooltip: {
                       valueSuffix: ' C'
                     }
@@ -258,7 +258,7 @@
                         }
                         point.update(newVal);
                       });                      
-                    }, 6200);
+                    }, 30600);
                   }
                 }
                 );
@@ -314,7 +314,7 @@
                   // the value axis
                   yAxis: {
                     min: 0,
-                    max: 120,
+                    max: 100,
                 
                     minorTickInterval: 'auto',
                     minorTickWidth: 1,
@@ -336,22 +336,22 @@
                     },
                     plotBands: [{
                       from: 0,
-                      to: 80,
+                      to: 60,
                       color: '#55BF3B' // green
                     }, {
-                      from: 80,
-                      to: 95,
+                      from: 60,
+                      to: 75,
                       color: '#DDDF0D' // yellow
                     }, {
-                      from: 95,
-                      to: 120,
+                      from: 75,
+                      to: 100,
                       color: '#DF5353' // red
                     }]
                   },
                 
                   series: [{
                     name: 'Temperatura',
-                    data: [<?php echo $values['c3'] ?>],
+                    data: [<?php echo $values['c1'] ?>],
                     tooltip: {
                       valueSuffix: ' C'
                     }
@@ -374,22 +374,15 @@
                         }
                         point.update(newVal);
                       });                      
-                    }, 7400);
+                    }, 300900);
                   }
                 }
                 );
             </script>
       </div>
-      <div class="row">
-        <div class="col-sm-12 col-xs-12">
-          <h3 class="text-center text-muted">
-            Godzina aktualizacji danych:  
-          </div>
-        </div>
       </div>      
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        
     </body>  
 </html>

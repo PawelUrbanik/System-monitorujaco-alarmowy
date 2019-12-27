@@ -9,7 +9,7 @@
 <body>
 <?php 
 require('nav.php');					
-require('zegar/index2.php'); 
+require('zegar/gauges.php'); 
 ?>
 			
 	

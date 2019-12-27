@@ -17,19 +17,7 @@
 <body>
 <?php 
 $rows = array();
-require('..\db\get_day.php');
-//echo count($responseC1);
-//echo count($responseTime);
-/*for($i=0; $i< count($responseTime); $i++)
-        {
-            $hour = $responseTime[$i];
-            echo "<br>";    
-            $hours = new DateTime($hour);
-            //echo $hours->format('H:i:s');
-            //echo "<br>";
-            //echo '\''. $hours->format('H:m:s') . '\'';
-            echo ', ';
-        }*/
+require(dirname(__FILE__).'/../db/get_day.php');
 ?>
 <?php require(dirname(__FILE__).'/../nav.php') ?>
 <?php if($responseTime == null)
@@ -97,9 +85,9 @@ Highcharts.chart('container', {
         data:
         [<?php 
 
-        for($i=0; $i< count($responseC1); $i++)
+        for($i=0; $i< count($responseC2); $i++)
         {
-            echo $responseC1[$i] ;
+            echo $responseC2[$i] ;
             echo ', ';
         }
         ?>]
@@ -108,9 +96,9 @@ Highcharts.chart('container', {
         data:
         [<?php 
 
-        for($i=0; $i< count($responseC2); $i++)
+        for($i=0; $i< count($responseC3); $i++)
         {
-            echo $responseC2[$i];
+            echo $responseC3[$i];
             echo ', ';
         }
         ?>]
@@ -119,9 +107,9 @@ Highcharts.chart('container', {
         data:
         [<?php 
 
-        for($i=0; $i< count($responseC3); $i++)
+        for($i=0; $i< count($responseC1); $i++)
         {
-            echo $responseC3[$i];
+            echo $responseC1[$i];
             echo ', ';
         }
         ?>]

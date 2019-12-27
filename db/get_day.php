@@ -2,8 +2,8 @@
 $now_date = date('Y-m-d H:i:s ', time());
 $hour_ago = date('Y-m-d H:i:s ', time() - 24*60*60);
 require("db_connect.php");
-//$sql = "SELECT * FROM sys_values WHERE time BETWEEN '$hour_ago' AND '$now_date';";
-$sql = "SELECT * FROM sys_values;";
+$sql = "SELECT * FROM sys_values WHERE time BETWEEN '$hour_ago' AND '$now_date';";
+//$sql = "SELECT * FROM sys_values;";
 
 $responseTime = array();
 $responseC1 = array();
@@ -20,8 +20,7 @@ if($result->num_rows >0)
         $responseC1[]=$row['c1'];
         $responseC2[]=$row['c2'];
         $responseC3[]=$row['c3'];
-        //echo $responseTime[$i];
-        //echo "<br>";
+        
     }
 
     
